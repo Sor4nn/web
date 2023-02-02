@@ -1,0 +1,77 @@
+/* arkusz styli zewnętrznych */
+body{
+	background-image:url(img/3.jpg);
+}
+h2{
+	text-align:center;
+	color:white;
+}
+fieldset{
+	width:400px;
+	border-radius:10px;
+	margin-left:auto;
+	margin-right:auto;
+}
+/* oznaczenie ID */
+#personaldata{
+width:400px;
+}
+legend{
+	font-weight:bold;
+	margin:3px;
+}
+form{
+	color:white;
+	margin:20px;
+	text-align:center;
+}
+input{
+	margin-left:10px;
+	margin-top:5px;
+}
+#multi{
+	width:150px;
+}
+#jezyki{
+	width:200px;
+}
+textarea{
+	resize:none;
+	color:red;
+}
+/* oznaczenie klasy */
+.plik{
+	font-weight:bold;
+}
+/* styl konkretnego typu */
+input[type="email"]{
+	color:blue;
+}
+/* pseudoklasy focus, checked, hover - działa tylko po kliknięciu / najechaniu pola*/
+textarea:focus{
+	color:white;
+	background:black;
+	font-size:14px;
+}
+input[type="checkbox"]:checked{
+	outline:3px inset red;
+}
+input:hover{
+	background-color:#faab88;
+}
+/* animacja*/
+input[type="submit"],input[type="reset"]{
+	border-radius:6px;
+	cursor:pointer;
+	background-color:#590053;
+	color:#FFFFFF;
+	width:140px;
+	transition:width 3s;
+}
+input[type="submit"]:hover,input[type="reset"]:hover{
+	border-radius:6px;
+	cursor:pointer;
+	background-color:#590053;
+	color:#FFFFFF;
+	width:200px;
+}
