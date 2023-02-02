@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+	<meta charset="utf-8"/>
+	<title>Formularz</title>
+	<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+	<h2>FORMULARZ</h2>
+	<form action="personal.php" method="post" autocomplete="off">
+	<fieldset id="personaldata">
+	<legend>Dane personalne</legend>
+	<br>
+	<!-- autofocus - wymusza kursor na polu -->
+	Podaj swoje nazwisko:<input type="text" name="nazwisko" required="yes" autofocus><br>
+	Podaj swoje imię:<input type="text" name="imie" required="yes"><br>
+	Podaj swój adres e-mail:<input type="email" name="mail" required="yes"><br>
+	Podaj swoją wagę:<input type="number" name="waga" required="yes" min="50" max="150"></input><br>
+	Podaj swoją wagę range:<input type="range" name="waga" required="yes" min="50" max="150"></input><br>
+	Podaj date urodzin:<input type="date" name="data" required="yes"><br>
+	</fieldset>
+	<br>
+	<fieldset>
+	<legend>Płeć</legend>
+	<label><input type="radio" name="plec" value="m" checked>mężczyzna</label>
+	<label><input type="radio" name="plec" value="k">kobieta</label>
+	</fieldset>
+	<br>
+	<fieldset>
+	<legend>Zainteresowania</legend>
+	<!-- disabled - nie da się wyłączyć, checked - domyślne zaznaczenie -->
+	<label><input type="checkbox" name="hobby" value="w" checked disabled>WSB</label>
+	<label><input type="checkbox" name="hobby" value="f">film</label>
+	<label><input type="checkbox" name="hobby" value="k">kotki</label>
+	<label><input type="checkbox" name="hobby" value="p">pieski</label>
+	<label><input type="checkbox" name="hobby" value="s">sport</label>
+	</fieldset>
+	<br>
+	<fieldset>
+	<legend>Wykształcenie</legend>
+	<!-- przy listach jednokrotnego wyboru select zamiast inputa, selected - wybór domyślny -->
+	<select name="wyk">
+	<option value="pd">podstawowe</option>
+	<option value="sr">średnie</option>
+	<option value="wy" selected>wyższe</option>
+	<option value="dk">doktorat</option>
+	</select>
+	</fieldset>
+	<br>
+	<fieldset>
+	<!-- size - zawężenie listy -->
+	<legend>Kategorie zakupów</legend>
+	<select name="zakupy" multiple id="multi" size="3">
+	<option value="zyw">żywność</option>
+	<option value="odz">odzież</option>
+	<option value="agd" selected>AGD</option>
+	<option value="rtv">RTV</option>
+	<option value="prz">przemysłowe</option>
+	</select>
+	</fieldset>
+	<br>
+	<fieldset>
+	<!-- lista zagęszczona -->
+	<legend>Stopień znajomości języków obcych</legend>
+	<select name="jezyki" id="jezyki" size="7" multiple>
+	<optgroup label="język angielski">
+		<option value="ac">stopień czynny</option>
+		<option value="ab">stopień bierny</option>
+	</optgroup>
+	<optgroup label="język rosyjski">
+		<option value="rc">stopień czynny</option>
+		<option value="rb">stopień bierny</option>
+	</optgroup>
+		</optgroup>
+	<optgroup label="język niemiecki">
+		<option value="nc">stopień czynny</option>
+		<option value="nb">stopień bierny</option>
+	</optgroup>
+	<optgroup label="język francuski">
+		<option value="fc">stopień czynny</option>
+		<option value="fb">stopień bierny</option>
+	</optgroup>
+	</select>
+	</fieldset>
+		<br>
+	<!-- pole tekstowe, w css blokujemy rozszerzanie -->
+	<fieldset>
+	<legend>Komentarz</legend>
+	<textarea name="komentarz" cols="50" rows="10" placeholder="Umieść komentarz"></textarea>		// placeholder - robi komentarz który znika po kliknięciu
+	</fieldset>
+	<br>
+	<!-- załącznik, typ accept - typy plików -->
+	<!-- class - definiowanie klasy w css -->
+	<p class="plik">Dodaj załącznik<input type="file" class="plik" name="plik" accept=".doc, .docx"></p>
+	<br>
+	<br>
+	
+	
+	<input type="submit" value="Wyślij formularz">
+	<input type="reset" value="Czyść formularz">
+
+	<!-- Treść komentarza -->
+	</body>
+</html>
