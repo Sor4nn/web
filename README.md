@@ -1,4 +1,4 @@
-I. HTML - hipertekstowy język znaczników
+<h1>I. HTML - hipertekstowy język znaczników</h1>
 Struktura dokumentu wg. specyfikacji HTML5 (nagłowek dokumentu, ciało dokumentu), DOM - model obiektowy dokumentu.
 Wybrane elementy języka HTML5 - elementy blokowe (nagłówki, akapity, listy, grupowanie znaczników za pomocą div), elementy wstawiane, elementy osadzone, odsyłacze.
 Tabele w HTML5 (tabele proste, wymiarowanie tabel, scalanie tabel).
@@ -51,3 +51,22 @@ Właściwości interaktywności (np. :hover, :focus)
 Dziedziczenie właściwości CSS3 polega na przekazywaniu wartości właściwości z rodzica na dziecko. 
 Jeśli dziecko nie posiada własnej wartości dla danej właściwości, jest ona dziedziczona z rodzica. 
 Można nadpisać dziedziczone właściwości za pomocą nowych wartości dla dziecka.
+
+<h1>III. Podstawy programowania w JavaScript</h1>
+
+Programowanie w JavaScript (JS) jest językiem skryptowym, który pozwala na interakcję z HTML i CSS oraz dodawanie dynamicznych elementów i funkcji na stronie internetowej.
+
+Podstawowa składnia języka JS to:
+
+Zmienne: służą do przechowywania danych, typy danych w JS to: number, string, boolean, undefined, null, symbol. Typ danych można sprawdzić za pomocą instrukcji typeof.
+Operatory: służą do wykonywania działań matematycznych i na tekstach.
+Funkcje okienkowe: takie jak alert(), confirm(), prompt(); pozwalają na interakcję z użytkownikiem.
+Instrukcje warunkowe: if/else pozwalają na wykonywanie różnych działań w zależności od warunku.
+Pętle: for i while pozwalają na powtarzanie bloku kodu.
+Tablica w JS jest obiektem służącym do przechowywania wielu wartości. Istnieją podstawowe funkcje i metody dotyczące tablic takie jak np. push() i pop().
+
+Zdarzenia to działania wykonywane przez użytkownika na stronie, takie jak kliknięcie przycisku. Zdarzenia można obsłużyć za pomocą funkcji użytkownika.
+
+Odwoływanie się do elementów DOM polega na uzyskaniu dostępu do elementów HTML i ich modyfikacji za pomocą JS. Można to zrobić np. poprzez wyszukanie elementu po ID lub klasie i zmianę jego wartości lub właściwości.
+
+Debugowanie kodu JS można wykonać za pomocą narzędzia debugger, takiego jak konsola lub inspektor.
