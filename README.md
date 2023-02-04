@@ -1,4 +1,6 @@
 <h1>I. HTML - hipertekstowy język znaczników</h1>
+https://chat.openai.com/chat
+https://beta.openai.com/playground
 Struktura dokumentu wg. specyfikacji HTML5 (nagłowek dokumentu, ciało dokumentu), DOM - model obiektowy dokumentu.
 Wybrane elementy języka HTML5 - elementy blokowe (nagłówki, akapity, listy, grupowanie znaczników za pomocą div), elementy wstawiane, elementy osadzone, odsyłacze.
 Tabele w HTML5 (tabele proste, wymiarowanie tabel, scalanie tabel).
