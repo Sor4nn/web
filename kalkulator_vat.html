@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+	<meta charset="utf-8"/>
+	<title>Strona główna</title>
+	<style>
+	.cf{
+	width:460px;margin:0; background-color:#F2D423
+	}
+	input{margin-top:6px;
+	}
+	#iw {
+	width:150px;text-align:right;
+	}
+	fieldset {
+	border:2px solid #02639A
+	}
+	legend{
+	font-weight:bold;color:red
+	}
+	input[type="button"]{
+	width:90px; height:35px;text-align:center;background:#B023;
+	}
+	.cscore {
+	font-weight:bold;font-size:18px;text-align:right;background-color:#ADD856;
+	}
+	.centre {
+	text-align:center;width:auto
+	}
+	
+	
+	</style>
+	<script>
+	function oblicz(){
+	// var wart = Number(document.forms.kalk_vat.wartosc.value);
+	
+	//var wart = Number(document.getElementById("iw")[0].value);
+	var wart = Number(document.querySelector("#iw").value);
+	//var lista = document.forms.kalk_vat.stawka.value;
+		
+	
+	//var lista = document.getElementsByClassName("cst")[0].value;
+	
+	//var lista = document.getElementsByTagName("select")[0].value;
+	var lista=document.querySelectorAll("select")[0].value;
+	switch (lista){
+	case "3%":
+	      st=0.03;
+    break;
+	case "5%":
+	      st=0.05;
+    break;
+	case "7%":
+	      st=0.07;
+    break;
+	case "8%":
+	      st=0.08;
+    break;
+	case "22%":
+	      st=0.22;
+    break;
+	case "23%":
+	      st=0.23;
+	} // koniec switch
+	if (document.forms.kalk_vat.sposob[0].checked)
+	wn=wart*(1+st);
+	if (document.forms.kalk_vat.sposob[1].checked)
+	wn=wart/(1+st);
+	
+	//document.forms.kalk_vat.wynik.value=wn.toFixed(2);
+	//document.getElementById("iww").value=wn.toFixed(2);
+	//document.getElementsByClassName("cscore")[0].value=wn.toFixed(2);
+	document.querySelectorAll(".cscore")[0].value=wn.toFixed(2);
+	
+	}// koniec ciala funkcji oblicz
+	function zmiana() {
+	var x=document.getElementById("iw");
+	//x.style.backgroundColor="yellow";
+	x.setAttribute("style","background-color:yellow;");
+	
+	}
+	function powrot() {
+	var x=document.getElementById("iw");
+	//x.style.backgroundColor="white";
+	x.setAttribute("style","background-color:white;");
+	
+	}
+	function jedn() {
+	var x=document.getElementById("ipl");
+	x.innerHTML= "<b>zloty</b>";
+	//x.textContent= "<b>zloty</b>";
+	}
+ const info=()=> 
+	alert ("Uwaga!\nKalkulator podatku VAT służy do obliczania wartości netto lub brutto"+
+"\nprzy podanych kryteriach tj. podanie wartości netto lub brutto"+
+"\noraz wybór stawki podatkowej, dla której będą dokonywane obliczenia.")
+	// koniec ciala funkcji info
+	function fun() {
+	var x=document.getElementsByClassName("cst")[0].value;
+	document.getElementById("iww").value="Wybrales: "+x+" i oblicz ";
+	}
+	</script>
+	
+	</head>
+	<body>
+	<form  name="kalk_vat" method="post" autocomplete="off" onReset="if (!confirm('Czy na pewno chcesz zresetować formularz?')) return false">
+	<div class="cf">
+	<fieldset>
+	<legend>KALKULATOR PODATKU VAT</legend>
+	Kalkulator oblicza wartosci netto lub brutto przy podanych kryteriach
+	<br/>
+	<br/>
+	Podaj wartosc:<input type="text" name="wartosc" id="iw" onfocus="zmiana()" onblur="powrot()" > PLN 
+	<br/>
+	<fieldset>
+	<legend>Sposob obliczania</legend>
+	<input type="radio" name="sposob" checked>netto na brutto</input>
+	<input type="radio" name="sposob">brutto na netto</input>
+	</fieldset>
+	<br/>
+	Wybierz stawke VAT: <select type="list" name="stawka" class="cst" onchange="fun()">
+	<option value="3%">3%</input>
+	<option value="5%">5%</input>
+	<option value="7%">7%</input>
+	<option value="8%">8%</input>
+	<option value="22%">22%</input>
+	<option value="23%">23%</input>
+	</select>
+	<br/>
+	<div class="centre">
+	<input type="button" value="Oblicz" onclick="oblicz()">
+	<input type="button" value="Wyczysc" onclick="this.form.reset()">
+	<input type="button" value="Informacja" onclick="info()"> 
+	<input type="button" value="Jednostka" onclick="jedn()"> 
+	</div>
+	<br/>
+	<fieldset>
+
+	<legend>Wyniki</legend>	
+	<div class="centre">
+	<input type="text" name="wynik" CLASS="cscore" id="iww" readonly><span id="ipl">PLN</span><br/>
+	</div>
+	</fieldset>
+	</fieldset>
+	</div>
+	</form >
+	<!-- Treść komentarza -->
+	</body>
+</html>
